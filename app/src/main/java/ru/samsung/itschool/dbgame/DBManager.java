@@ -35,13 +35,31 @@ public class DBManager {
 		db.execSQL("INSERT INTO RESULTS VALUES ('" + username + "', " + score
 				+ ");");
 	}
-
+	// Player one 150
+	// INSERT INTO RESULTS VALUES('Player one', 150)
 
 
 	ArrayList<Result> getAllResults() {
 
 		ArrayList<Result> data = new ArrayList<Result>();
 		Cursor cursor = db.rawQuery("SELECT * FROM RESULTS;", null);
+		boolean hasMoreData = cursor.moveToFirst();
+
+		while (hasMoreData) {
+			String name = cursor.getString(cursor.getColumnIndex("USERNAME"));
+			int score = Integer.parseInt(cursor.getString(cursor
+					.getColumnIndex("SCORE")));
+			data.add(new Result(name, score));
+			hasMoreData = cursor.moveToNext();
+		}
+
+		return data;
+	}
+
+	ArrayList<Result> getCurResult(String mode) {
+		ArrayList<Result> data = new ArrayList<Result>();
+			Cursor cursor = db.rawQuery("SELECT * FROM RESULTS ORDER BY SCORE " + mode +" ;", null);
+
 		boolean hasMoreData = cursor.moveToFirst();
 
 		while (hasMoreData) {
