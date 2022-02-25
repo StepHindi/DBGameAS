@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    tools:context="${relativePackage}.${activityClass}" >
+     >
 
     <TextView
         android:id="@+id/textView1"
@@ -28,7 +28,8 @@
         android:padding="10dp"
         android:text="Player One"
         android:textAlignment="center"
-        android:textSize="30dp"></EditText>
+        android:textSize="30dp"
+        android:gravity="center_horizontal"></EditText>
 
     <TextView
         android:id="@+id/GameResult"
@@ -44,8 +45,12 @@
         android:id="@+id/hallOfFame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_marginStart="151dp"
+        android:layout_marginLeft="151dp"
+        android:layout_marginBottom="2dp"
         android:onClick="showHoF"
         android:text="Hall of Fame"
         android:textSize="30dp" />
@@ -71,5 +76,22 @@
         android:onClick="play"
         android:scaleType="fitCenter"
         android:src="@drawable/green" />
+
+    <Button
+        android:id="@+id/button_best_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="9dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginEnd="306dp"
+        android:layout_marginRight="306dp"
+        android:layout_marginBottom="18dp"
+        android:onClick="bestScore"
+        android:text="Best score" />
 
 </RelativeLayout>

@@ -6,8 +6,9 @@
     android:layout_height="match_parent"
     tools:context="ru.samsung.itschool.dbgame.StatActivity">
 
-    <ListView
-        android:id="@+id/listView2"
+    <view
+        android:id="@+id/recycleList"
+        class="androidx.appcompat.app.AlertController$RecycleListView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"

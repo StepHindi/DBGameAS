@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -65,5 +66,9 @@ public class MainActivity extends Activity {
 
 	public void showHoF(View v) {
 		startActivity(new Intent(this, HoFActivity.class));
+	}
+
+	public void bestScore(View view) {
+		startActivity(new Intent(this, BestScoreEverActivity.class));
 	}
 }

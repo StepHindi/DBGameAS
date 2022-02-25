@@ -46,7 +46,7 @@ public class ResultAdapter extends BaseAdapter {
         if (results.get(position).score >= 500) {
 //            android.R.layout.simple_list_item_1
 
-            textView2.setTextColor(Color.GREEN);
+            textView2.setTextColor(Color.BLUE);
         }
         else {
             textView2.setTextColor(Color.RED);

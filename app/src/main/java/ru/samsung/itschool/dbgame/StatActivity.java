@@ -16,7 +16,8 @@ public class StatActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stat);
-        ListView listView = this.findViewById(R.id.listView2);
+        ListView listView = this.findViewById(R.id.recycleList);
+        /*
         listView.setAdapter(new NumberAdapter(this));
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -24,5 +25,6 @@ public class StatActivity extends Activity {
                 Toast.makeText(StatActivity.this, (position + ""), Toast.LENGTH_LONG).show();
             }
         });
+         */
     }
 }
